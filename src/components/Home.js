@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Todo from './Todo';
 
 const Home = () => {
+  const [taskname, settaskname] = useState('');
+  const [details, setdetails] = useState('');
+  const [duration, setduration] = useState('');
     const handelTask=(e)=>{
             e.preventDefault()
-            const taskname=e.target.task.value;
-            const duration=e.target.duration.value;
-            const details=e.target.dailytask.value;
+            
            
             const task={taskname,duration,details}
           fetch('http://localhost:5000/task',{
@@ -31,16 +32,37 @@ const Home = () => {
           <form className='w-50 mx-auto' onSubmit={handelTask}>
           <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Task Name</label>
-    <input type="name" name="task" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+    <input
+          type="text"
+          id="first"
+          name="first"
+          value={taskname}
+          onChange={event => settaskname(event.target.value)}
+          autoComplete="off"
+        />
     
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Task Date</label>
-    <input type="date" name='duration' class="form-control" id="exampleInputPassword1" required/>
+    <input
+          type="date"
+          id="first"
+          name="duration"
+          value={duration}
+          onChange={event => setduration(event.target.value)}
+          autoComplete="off"
+        />
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Task Details</label>
-    <textarea name="dailytask" className='form-control' id="" cols="30" rows="10" required></textarea>
+    <input
+          type="text"
+          id="first"
+          name="details"
+          value={details}
+          onChange={event => setdetails(event.target.value)}
+          autoComplete="off"
+        />
   </div>
             <button className='btn btn-info'>Add Task</button>
           </form>

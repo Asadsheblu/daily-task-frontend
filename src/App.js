@@ -12,6 +12,7 @@ import Todo from './components/Todo';
 import Calender from './components/Calender';
 import Footer from './components/Footer';
 import Edittask from './components/Edittask';
+import Notfound from './components/Notfound';
 function App() {
   
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/todo' element={<Todo />}></Route>
           <Route path='/calendar' element={<Calender />}></Route>
           <Route path='/todo/:id' element={<Edittask />}></Route>
+          <Route path='*' element={<Notfound />}></Route>
           
 
         </Routes>
