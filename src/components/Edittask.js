@@ -20,7 +20,7 @@ const Edittask = () => {
         const details=e.target.dailytask.value;
        
         const task={taskname,duration,details}
-      fetch(`http://localhost:5000/task/${id}`,{
+      fetch(`https://pure-castle-81331.herokuapp.com/task/${id}`,{
         method:"PUT",
         headers:{
             "content-type":"application/json"

@@ -5,7 +5,7 @@ import {
   } from "react-router-dom";
 const Tasklist = ({task,index}) => {
     const handelDelete=(id)=>{
-        fetch(`http://localhost:5000/task/${id}`,{
+        fetch(`https://pure-castle-81331.herokuapp.com/task/${id}`,{
             method:"DELETE",
             headers:{
                 "content-type":"application/json"
