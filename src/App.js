@@ -11,6 +11,7 @@ import Home from './components/Home';
 import Todo from './components/Todo';
 import Calender from './components/Calender';
 import Footer from './components/Footer';
+import Edittask from './components/Edittask';
 function App() {
   
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/todo' element={<Todo />}></Route>
           <Route path='/calendar' element={<Calender />}></Route>
+          <Route path='/todo/:id' element={<Edittask />}></Route>
           
 
         </Routes>

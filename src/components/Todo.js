@@ -21,6 +21,8 @@ const Todo = () => {
      <tr>
   <th scope="col">#</th>
   <th scope="col">Task Name</th>
+  <th scope="col">Task Date</th>
+  <th scope="col">Task Details</th>
   <th scope="col">Edit</th>
   <th scope="col">Deleted</th>
   <th scope="col">Completed</th>
